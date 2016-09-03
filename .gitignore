@@ -1,0 +1,14 @@
+coverage/
+node_modules/
+typings/
+npm-debug.log
+
+/*.js
+/*.js.map
+/*.d.ts
+
+/lib/*.js
+/lib/*.js.map
+/lib/*.d.ts
+
+**/*.swp
