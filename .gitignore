@@ -10,5 +10,8 @@ npm-debug.log
 /lib/*.js
 /lib/*.js.map
 /lib/*.d.ts
+/lib/**/*
 
 **/*.swp
+
+config.ts

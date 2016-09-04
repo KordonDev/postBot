@@ -1,4 +1,7 @@
 import { Greeter } from "./greeter";
+import { Telegram } from "./telegram";
 
 export { Greeter };
-console.log('hallo');
+const greeter = new Greeter("Arne");
+console.log(greeter.greet());
+const bot = new Telegram();

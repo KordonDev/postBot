@@ -20,7 +20,7 @@
     "test": "npm run build && mocha --compilers ts:ts-node/register --recursive test/**/*-spec.ts",
     "watch": "npm run build -- --watch",
     "watch:test": "npm run test -- --watch",
-    "execute": "node lib/index.js",
+    "execute": "node lib/src/index.js",
     "check": "npm run build && npm run execute"
   },
   "dependencies": {
