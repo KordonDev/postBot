@@ -3,10 +3,21 @@ declare var TelegramBot: any;
 import { config } from "../config";
 
 export class Telegram {
-    private _token: string = "";
-    // var bot = TelegramBot(_token, {polling: true});
-    // console.log(bot);
+    private _token: string = config.telegramToken;
+    private bot:any;
+
     constructor() {
-        console.log(config.telegramToken);
+         this.bot = new TelegramBot(this._token, {polling: true});
     }
+
+    echo() {
+        this.bot.onText(/(.+)/, (msg:any, match:any) => {
+            console.log(msg)
+            let fromId = msg.from.id;
+            let response = match[1];
+            console.log(this.bot);
+            this.bot.sendMessage(fromId, response);
+        })
+    }
+
 }

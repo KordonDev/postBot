@@ -24,7 +24,7 @@
     "check": "npm run build && npm run execute"
   },
   "dependencies": {
-    "node-telegram-bot-api": "^0.23.3"
+    "node-telegram-bot-api": "0.23.3"
   },
   "devDependencies": {
     "@types/chai": "3.4.30",
