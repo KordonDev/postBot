@@ -1,7 +1,8 @@
 export class config {
-    public telegramToken:string = "";
-    public websideUsername: string = "";
-    public websidePassword: string = "";
+    public static telegramToken:string = "";
+    public static websideUsername: string = "";
+    public static websidePassword: string = "";
+    public static chatId: string ="";
     
     constructor() {}
 } 
