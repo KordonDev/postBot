@@ -10,14 +10,29 @@ export class Telegram {
          this.bot = new TelegramBot(this._token, {polling: true});
     }
 
-    echo() {
-        this.bot.onText(/(.+)/, (msg:any, match:any) => {
-            console.log(msg)
+
+    receiveMessage() {
+        this.bot.onText(/Post/i, (msg:any, match:any) => {
             let fromId = msg.from.id;
-            let response = match[1];
-            console.log(this.bot);
+            let response = "Article posted.";
             this.bot.sendMessage(fromId, response);
-        })
+        });
+
+        this.bot.onText(/Add me/i, (msg:any, match:any)=> {
+            let fromId = msg.from.id;
+            let response = "Added you to list.";
+            this.bot.sendMessage(fromId, response);
+        });
+
+        this.bot.onText(/123/, (msg:any, match:any)=> {
+            let fromId = msg.from.id;
+            let response = "Only numbers send";
+            this.bot.sendMessage(fromId, response);
+        });
+    }
+
+    sendMessage() {
+        this.bot.sendMessage(config.chatId, "Work hard!")
     }
 
 }
